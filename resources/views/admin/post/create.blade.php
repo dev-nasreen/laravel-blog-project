@@ -5,20 +5,21 @@
 
 
     <div class="card mt-4">
-        @if($errors->any())
-        <div class="alert alert-danger">
-            @foreach($errors->all() as $error)
-            <div>
-                {{$error}}
-            </div>
-            @endforeach
-        </div>
-        @endif
+
         <div class="card-header">
             <h4>Add Post<a class="btn btn-primary btn-sm float-end" href="{{url('admin/add-post')}}">Add Post</a></h4>
 
         </div>
         <div class="card-body">
+            @if($errors->any())
+            <div class="alert alert-danger">
+                @foreach($errors->all() as $error)
+                <div>
+                    {{$error}}
+                </div>
+                @endforeach
+            </div>
+            @endif
             <form action="{{url('admin/add-post')}}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
@@ -39,7 +40,7 @@
                 </div>
                 <div class="mb-3">
                     <label>Description</label>
-                    <textarea name="description" class="form-control" rows="4"></textarea>
+                    <textarea name="description" id="my_summernote" class="form-control" rows="4"></textarea>
                 </div>
                 <div class="mb-3">
                     <label>Youtube Iframe link</label>
@@ -52,11 +53,11 @@
                 </div>
                 <div class="mb-3">
                     <label>Meta Description</label>
-                    <textarea name="meta_description" class="form-control" rows="3"></textarea>
+                    <textarea name="meta_description" id="my_summernote"  class="form-control" rows="3"></textarea>
                 </div>
                 <div class="mb-3">
                     <label>Meta Keyword</label>
-                    <textarea name="meta_keyword" class="form-control" rows="3"></textarea>
+                    <textarea name="meta_keyword" id="my_summernote"  class="form-control" rows="3"></textarea>
                 </div>
 
                 <h4>Status</h4>

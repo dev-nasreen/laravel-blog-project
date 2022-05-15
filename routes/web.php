@@ -34,6 +34,12 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function(){
     Route::get('posts', [App\Http\Controllers\admin\PostController::class, 'index']);
     Route::get('add-post', [App\Http\Controllers\admin\PostController::class, 'create']);
    Route::post('add-post', [App\Http\Controllers\admin\PostController::class, 'store']);
+   Route::get('edit-post/{post_id}', [App\Http\Controllers\admin\PostController::class, 'edit']);
+   Route::put('update-post/{post_id}', [App\Http\Controllers\admin\PostController::class, 'update']);
+   Route::get('delete-post/{post_id}', [App\Http\Controllers\admin\PostController::class, 'destroy']);
    
+   Route::get('users', [App\Http\Controllers\admin\userController::class, 'index']);
+   Route::get('users/{user_id}', [App\Http\Controllers\admin\userController::class, 'edit']);
+   Route::put('update-user/{user_id}', [App\Http\Controllers\admin\userController::class, 'update']);
 });
  

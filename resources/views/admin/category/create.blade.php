@@ -33,7 +33,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="">Description</label>
-                    <textarea name="description" rows="5" class="form-control"></textarea>
+                    <textarea name="description" id="my_summernote" rows="5" class="form-control"></textarea>
                 </div>
                 <div class="mb-3">
                     <label for="">Image</label>
@@ -47,11 +47,11 @@
                 </div>
                 <div class="mb-3">
                     <label for="">Meta Description</label>
-                    <textarea name="meta_description" rows="3" class="form-control"></textarea>
+                    <textarea name="meta_description" id="my_summernote"  rows="3" class="form-control"></textarea>
                 </div>
                 <div class="mb-3">
                     <label for="">Meta Keyword</label>
-                    <textarea name="meta_keyword" rows="3" class="form-control"></textarea>
+                    <textarea name="meta_keyword" rows="3" id="my_summernote"  class="form-control"></textarea>
                 </div>
                 <h6>Status Mode</h6>
                 <div class="row">

@@ -21,6 +21,7 @@
                         <th>Category</th>
                         <th>Post Name</th>
                         <th>Status</th>
+                        <th>Description</th>
                         <th>Edit</th>
                         <th>Delete</th>
                     </tr>
@@ -32,6 +33,7 @@
                         <td>{{$post->category->name}}</td>
                         <td>{{$post->name}}</td>
                         <td>{{$post->status == '1'? "hidden": "visible"}}</td>
+                        <td>{{$post->description}}</td>
                         <td>
                             <a href="{{url('admin/edit-post/'.$post->id)}}" class="btn btn-success">Edit</a>
                         </td>
@@ -42,6 +44,7 @@
                     @endforeach
                 </tbody>
             </table>
+            {{$posts->links()}}
         </div>
     </div>
 
